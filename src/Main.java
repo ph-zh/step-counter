@@ -5,6 +5,7 @@ public class Main {
         System.out.println("Hello and thank you for using 'Happy Hippo'" + " 🦛☄️ " + "step counter application!");
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker(scanner);
+        MonthData monthData = new MonthData();
 
         while (true) {
             printMenu();
@@ -32,6 +33,7 @@ public class Main {
 - Чтобы понять, за какой месяц посчитать статистику, необходимо запросить месяц.
                  */
                 System.out.println("Выполняется команда " + command);
+                monthData.printDaysAndStepsFromMonth();
             } else if (command == 0){
                 System.out.println("Exit");
                 scanner.close();
