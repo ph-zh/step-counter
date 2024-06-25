@@ -6,6 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker(scanner);
         MonthData monthData = new MonthData();
+        Converter converter = new Converter();
 
         while (true) {
             printMenu();

@@ -13,15 +13,18 @@ int convertStepsToKilocalories(int steps): метод, переводящий к
  */
 
 public class Converter {
-    int stepToDistance = 75;
-    int stepsToKilocalories = 50;
-    int kilocalorie = 1000;
+    int steps = 10;
+    int stepToDistance = 75; // cm
+    int stepsToKilocalories = 50; // calories
+    int kilocalorie = 1000; // 1 kilo = 1000 calories
 
     int convertToKm(int steps) {
-
+        steps = stepToDistance / stepsToKilocalories;
+        return steps;
     }
 
     int convertStepsToKilocalories(int steps) {
-
+        steps = kilocalorie / stepsToKilocalories;
+        return steps;
     }
 }
