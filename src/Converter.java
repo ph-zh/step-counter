@@ -23,6 +23,7 @@ public class Converter {
         return steps;
     }
 
+    // converter method
     int convertStepsToKilocalories(int steps) {
         steps = kilocalorie / stepsToKilocalories;
         return steps;
