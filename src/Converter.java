@@ -13,13 +13,16 @@ int convertStepsToKilocalories(int steps): метод, переводящий к
  */
 
 public class Converter {
-    int steps = 10;
-    int stepToDistance = 75; // cm
+    int stepLength = 75; // cm
+    int stepMeter = 100; //cm
+    int stepKm = 1000; // km
     int stepsToKilocalories = 50; // calories
     int kilocalorie = 1000; // 1 kilo = 1000 calories
 
+
     int convertToKm(int steps) {
-        steps = stepToDistance / stepsToKilocalories;
+        steps = steps * stepLength / stepMeter / stepKm;
+        System.out.println(steps + " Km");
         return steps;
     }
 

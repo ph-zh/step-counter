@@ -27,6 +27,8 @@ public class Main {
 - Цель общая на всё приложение, её нужно где-то хранить.
                  */
                 System.out.println("Выполняется команда " + command);
+                int steps = 10000;
+                converter.convertToKm(steps);
             } else if (command == 3) {
                 /*
 3/ Вывод статистики за определённый месяц
