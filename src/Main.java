@@ -29,6 +29,7 @@ public class Main {
                 System.out.println("Выполняется команда " + command);
                 int steps = 10000;
                 converter.convertToKm(steps);
+                converter.convertStepsToKilocalories(steps);
             } else if (command == 3) {
                 /*
 3/ Вывод статистики за определённый месяц
