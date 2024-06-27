@@ -4,9 +4,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and thank you for using 'Happy Hippo'" + " 🦛☄️ " + "step counter application!");
         Scanner scanner = new Scanner(System.in);
-        StepTracker stepTracker = new StepTracker(scanner);
         MonthData monthData = new MonthData();
         Converter converter = new Converter();
+        StepTracker stepTracker = new StepTracker(scanner, converter);
 
         while (true) {
             printMenu();
@@ -27,9 +27,7 @@ public class Main {
 - Цель общая на всё приложение, её нужно где-то хранить.
                  */
                 System.out.println("Выполняется команда " + command);
-                int steps = 10000;
-                converter.convertToKm(steps);
-                converter.convertStepsToKilocalories(steps);
+                stepTracker.printStatistics();
             } else if (command == 3) {
                 /*
 3/ Вывод статистики за определённый месяц
