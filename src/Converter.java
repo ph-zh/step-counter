@@ -5,7 +5,6 @@ public class Converter {
     int stepsToKilocalories = 50; // calories
     int kilocalorie = 1000; // 1 kilo = 1000 calories
 
-
     int convertToKm(int steps) {
         steps = steps * stepLength / stepMeter / stepKm;
         return steps;
