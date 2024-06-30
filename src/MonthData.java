@@ -1,12 +1,11 @@
-import java.util.Random;
+import java.util.Scanner;
 
 public class MonthData {
     int[] days = new int[30];
-    Random random = new Random();
+    Scanner scanner = new Scanner(System.in);
 
     void printDaysAndStepsFromMonth() {
         for(int i = 0; i < days.length; i++) {
-            days[i] = random.nextInt(100);
             System.out.println((i + 1) + " day: " + days[i]);
         }
     }
