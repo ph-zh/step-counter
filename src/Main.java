@@ -6,6 +6,7 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker();
         int steps = 111;
+        //steps test
 
         while (true) {
             printMenu();
