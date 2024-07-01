@@ -4,9 +4,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Hello and thank you for using 'StepBuddy Hippo'" + " 🦛☄️ " + "step counter application!");
         Scanner scanner = new Scanner(System.in);
-        StepTracker stepTracker = new StepTracker();
-        int steps = 111;
-        //steps test
 
         while (true) {
             printMenu();
@@ -14,16 +11,12 @@ public class Main {
 
             if (command == 1 ) {
                 System.out.println("Executing command " + command);
-                stepTracker.addNewNumberStepsPerDay(scanner, stepTracker.days);
             } else if (command == 2) {
                 System.out.println("Executing command " + command);
-                stepTracker.printStatistics();
             } else if (command == 3) {
                 System.out.println("Executing command " + command);
-                stepTracker.printStatistics();
             } else if (command == 4) {
                 System.out.println("checking staff");
-                stepTracker.printDaysAndStepsFromDay();
             }
             else if (command == 0){
                 System.out.println("Exit");
