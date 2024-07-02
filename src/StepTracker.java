@@ -1,11 +1,19 @@
 import java.util.Scanner;
 
 public class StepTracker {
-    Scanner scanner = new Scanner(System.in);
+    Scanner scanner;
     MonthData[] monthToData = new MonthData[12];
     Converter converter = new Converter();
     MonthData monthData = new MonthData();
     int steps;
+
+    StepTracker(Scanner scan) {
+        scanner = scan;
+
+        for (int i = 0; i < monthToData.length; i++) {
+            monthToData[i] = new MonthData();
+        }
+    }
 
     void addNewNumberStepsPerDay(MonthData[] monthToData, MonthData monthData, int steps) {
         System.out.println("Enter the month number");
