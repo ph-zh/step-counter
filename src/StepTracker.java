@@ -4,8 +4,8 @@ public class StepTracker {
     Scanner scanner;
     MonthData[] monthToData = new MonthData[12];
     Converter converter = new Converter();
-    int steps; // 0
     int goalByStepsPerDay = 10000;
+    int steps;
 
     StepTracker(Scanner scan) {
         scanner = scan;
@@ -15,7 +15,7 @@ public class StepTracker {
         }
     }
 
-    void addNewNumberStepsPerDay(MonthData[] monthToData, MonthData monthData, int steps) {
+    void addNewNumberStepsPerDay() {
         System.out.println("Enter the month number");
         int month = scanner.nextInt();
         System.out.println("You entered the following month: " + month);
@@ -23,13 +23,14 @@ public class StepTracker {
             System.out.println("Enter the day from 1 to 30 (inclusive)");
             int day = scanner.nextInt();
             System.out.println("You entered the following day: " + day);
-            if (day <= monthData.days.length && day > 0) {
+            if (day <= monthToData[month - 1].days.length && day > 0) {
                 System.out.println("Enter the number of steps");
-                steps = scanner.nextInt();
+                int steps = scanner.nextInt();
                 System.out.println("You entered the following steps: " + steps);
                 if (steps > 0) {
-                    monthData.days[day - 1] = monthData.days[day - 1] + steps;
-                    System.out.println("Value saved! Your steps: " + monthData.days[day - 1]);
+                    int currentSteps = monthToData[month - 1].days[day - 1];
+                    monthToData[month - 1].days[day - 1] = currentSteps + steps;
+                    System.out.println("Value saved! Your steps: " + monthToData[month - 1].days[day - 1]);
                 } else {
                     System.out.println("The number of steps must be a positive number greater than zero");
                 }
@@ -42,11 +43,11 @@ public class StepTracker {
     }
 
     void changeStepGoal() {
-        System.out.println("daily goal is" + goalByStepsPerDay);
+        System.out.println("daily goal is " + goalByStepsPerDay);
         System.out.println("change your daily");
         int goal = scanner.nextInt();
         goalByStepsPerDay = goal;
-        System.out.println("your new goal is" + goalByStepsPerDay);
+        System.out.println("your new goal is " + goalByStepsPerDay);
     }
 
     void printStatistics() {
