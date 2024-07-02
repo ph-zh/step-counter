@@ -14,13 +14,15 @@ public class Main {
 
             if (command == 1 ) {
                 System.out.println("Executing command " + command);
+                stepTracker.addNewNumberStepsPerDay(stepTracker.monthToData, monthData, steps);
             } else if (command == 2) {
                 System.out.println("Executing command " + command);
+                stepTracker.printStatistics();
             } else if (command == 3) {
                 System.out.println("Executing command " + command);
+                stepTracker.changeStepGoal();
             } else if (command == 4) {
                 System.out.println("checking staff");
-                stepTracker.addNewNumberStepsPerDay(stepTracker.monthToData, monthData, steps);
             } else if (command == 0){
                 System.out.println("Exit");
                 scanner.close();

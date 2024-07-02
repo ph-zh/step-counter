@@ -4,8 +4,8 @@ public class StepTracker {
     Scanner scanner;
     MonthData[] monthToData = new MonthData[12];
     Converter converter = new Converter();
-    MonthData monthData = new MonthData();
     int steps;
+    int goalByStepsPerDay = 10000;
 
     StepTracker(Scanner scan) {
         scanner = scan;
@@ -39,6 +39,14 @@ public class StepTracker {
         } else {
             System.out.println("The month number must be from 1 to 12 inclusive");
         }
+    }
+
+    void changeStepGoal() {
+        System.out.println("daily goal is" + goalByStepsPerDay);
+        System.out.println("change your daily");
+        int goal = scanner.nextInt();
+        goalByStepsPerDay = goal;
+        System.out.println("your new goal is" + goalByStepsPerDay);
     }
 
     void printStatistics() {
