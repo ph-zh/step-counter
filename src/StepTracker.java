@@ -4,7 +4,7 @@ public class StepTracker {
     Scanner scanner;
     MonthData[] monthToData = new MonthData[12];
     Converter converter = new Converter();
-    int steps;
+    int steps; // 0
     int goalByStepsPerDay = 10000;
 
     StepTracker(Scanner scan) {
