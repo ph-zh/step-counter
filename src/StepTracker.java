@@ -44,7 +44,7 @@ public class StepTracker {
 
     void changeStepGoal() {
         System.out.println("daily goal is " + goalByStepsPerDay);
-        System.out.println("change your daily");
+        System.out.println("change your daily goal");
         int goal = scanner.nextInt();
         goalByStepsPerDay = goal;
         System.out.println("your new goal is " + goalByStepsPerDay);
