@@ -15,10 +15,10 @@ public class Main {
                 stepTracker.addNewNumberStepsPerDay();
             } else if (command == 2) {
                 System.out.println("Executing command " + command);
-                stepTracker.printStatistics();
+                stepTracker.changeStepGoal();
             } else if (command == 3) {
                 System.out.println("Executing command " + command);
-                stepTracker.changeStepGoal();
+                stepTracker.printStatistics();
             } else if (command == 4) {
                 System.out.println("!! Check different methods !!");
             } else if (command == 0){

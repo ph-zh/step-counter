@@ -46,8 +46,12 @@ public class StepTracker {
         System.out.println("daily goal is " + goalByStepsPerDay);
         System.out.println("change your daily goal");
         int goal = scanner.nextInt();
-        goalByStepsPerDay = goal;
-        System.out.println("your new goal is " + goalByStepsPerDay);
+        if (goal <= 0) {
+            System.out.println("The number of steps must be a positive number greater than zero");
+        } else {
+            goalByStepsPerDay = goal;
+            System.out.println("your new goal is " + goalByStepsPerDay);
+        }
     }
 
     void printStatistics() {
