@@ -55,7 +55,7 @@ public class StepTracker {
     }
 
     void printStatistics() {
-        System.out.println("Number of steps taken per day: " + steps);
+        System.out.println("Number of steps taken per day: " + 1);
         System.out.println("Total number of steps for the month XXX ");
         System.out.println("Maximum number of steps taken in a month: YYY");
         System.out.println("Average number of steps: ZZZ");

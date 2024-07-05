@@ -21,6 +21,7 @@ public class Main {
                 stepTracker.printStatistics();
             } else if (command == 4) {
                 System.out.println("!! Check different methods !!");
+
             } else if (command == 0){
                 System.out.println("Exit");
                 scanner.close();
