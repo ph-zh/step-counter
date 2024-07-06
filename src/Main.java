@@ -5,6 +5,8 @@ public class Main {
         System.out.println("Hello and thank you for using 'StepBuddy Hippo'" + " 🦛☄️ " + "step counter application!");
         Scanner scanner = new Scanner(System.in);
         StepTracker stepTracker = new StepTracker(scanner);
+        MonthData monthData = new MonthData();
+        int[] days = new int[30];
 
         while (true) {
             printMenu();
@@ -21,7 +23,7 @@ public class Main {
                 stepTracker.printStatistics();
             } else if (command == 4) {
                 System.out.println("!! Check different methods !!");
-
+                monthData.printDaysAndStepsFromMonth(days);
             } else if (command == 0){
                 System.out.println("Exit");
                 scanner.close();
